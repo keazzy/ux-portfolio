@@ -227,11 +227,11 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  padding: 20px 60px;
-  color: black;
+  padding: 10px 50px;
+  color: #41308d;
   text-align: center;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -256,7 +256,19 @@ input[type="button"] {
   input[type="button"]:focus {
     outline: 0;
     transform: scale(1.01);
-    transform: translateY(3px); }
+    transform: translateY(3px);
+    background: #41308d;
+    color: #b2a8e1; }
+
+.info--btn {
+  color: #b2a8e1;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #b2a8e1;
+  height: 3rem;
+  line-height: 1.2;
+  min-width: 2.5rem;
+  padding: 1.5rem 2rem; }
 
 a {
   color: #0074D9;
@@ -428,3 +440,22 @@ header {
 
 main {
   margin-top: 15rem; }
+  @media screen and (max-width: 768px) {
+    main {
+      margin-top: 12rem; } }
+  main .intro h2,
+  main .intro p {
+    margin: 2rem 0; }
+  main .intro h2 {
+    font-size: 5rem;
+    font-size: 700; }
+    @media screen and (max-width: 768px) {
+      main .intro h2 {
+        font-size: 2.5rem; } }
+  main .intro--details {
+    color: #aaa;
+    width: 50%;
+    line-height: 2; }
+    @media screen and (max-width: 900px) {
+      main .intro--details {
+        width: 80%; } }

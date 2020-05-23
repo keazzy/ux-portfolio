@@ -36,19 +36,83 @@
             <div class="intro">
                 <p class="text-accent">Hi👋My Name is </p>
                 <h2 class="intro--name">Adeleke Azeez</h2>
-                <h2 class="intro--about">IResearch • IDesign • ICode</h2>
+                <h2 id="intro--about">IResearch • IDesign • ICode</h2>
                 <p class="intro--details">It takes knowledge, smart work, and dedication to make
                     great ideas come to life. I have been persistent in making abstract ideas
                     come to limelight for the past few years and am always ready for new challenges.
-                    <span>I research, I Desgin, I Bring to life</span>
+                    <span>I research, I Desgin, I Bring to life</span><br>Have an intresting project for me to work on?
                 </p>
                 <div class="spacer"></div>
                 <a href="#" class="intro--btn button">Let's Talk</a>
+            </div>
+
+            <div class="about" id="about">
+                <div class="about__header">
+                    <h2><span class="text-accent">01.</span>About me.</h2>
+                </div>
+
+                <div class="about__content">
+                    <div class="details">
+                        <p>
+                            I’m a designer who codes. I strive to create simple, original, and impactful user experiences.
+                            I take on projects of all sizes; from web design and build, to product and system design.
+                            I’ve lead and been part of the design and creative direction of products, teams, and design systems of 
+                            multiple products.
+                        </p>
+                        <p>
+                            I enjoy creating user-centric, delightful, and human experiences as well as using technology to design softwares that helps the
+                            welfare of the society and also empowering the succeeding generations with gained knowledge.
+                        </p>
+                        <p>
+                            With your vision, my design savvy, and a hefty amount of coffee, we can create a digital experience that is creative, beautiful, and memorable.
+                        </p>
+                        <p> Below are my current Toolset
+                            <div class="technologies">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>JQuery</li>
+                                    <li>Wordpress</li>
+                                </ul>
+                                <ul>
+                                    <li>Illustrator</li>
+                                    <li>Figma</li>
+                                    <li>Protopie</li>
+                                    <li>AdobeXD</li>
+                                    <li>Adobe After Effects</li>
+                                    </ul>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="works" id="works">
+                    <div class="works__header">
+                        <h2><span class="text-accent">02.</span>About me.</h2>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
 
+
+    <script>
+        var text = document.getElementById('intro--about');
+        var typewriter = new Typewriter(text, {
+            loop: true
+        });
+
+        typewriter.typeString('IResearch • IDesign • ICode')
+            .pauseFor(1500)
+            .deleteAll()
+            .typeString('I design apps that people love')
+            .pauseFor(1500)
+            .deleteAll()
+            .typeString('<strong>I am a developer!</strong>')
+            .start();
+    </script>
 </body>
 
 </html>
