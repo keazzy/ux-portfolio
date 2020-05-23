@@ -63,7 +63,7 @@ h1 {
   margin: 0.67em 0; }
 
 mark {
-  background: #ff0;
+  background: #000;
   color: #000; }
 
 small {
@@ -365,11 +365,10 @@ hr {
   left: 0; }
 
 header {
-  width: 80%;
+  width: 100%;
   position: fixed;
-  font-size: 16px;
   top: 0;
-  z-index: 999; }
+  z-index: 99999; }
   header nav {
     display: flex;
     justify-content: space-between;
