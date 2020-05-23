@@ -1,6 +1,7 @@
 html
   // border-box box model allows us to add padding and border to our elements without increasing their size
   box-sizing: border-box
+  scroll-behavior: smooth
 
   // WAT IS THIS?!
   // We inherit box-sizing: border-box; from our <html> selector
@@ -23,8 +24,12 @@ body
 
 .container
   width: 80%
-  color: $white
+  color:
   margin: 2rem auto
+  @media screen and ( max-width: 768px )
+    width: 90%
+
+    
 
 .wrapper
   width: 100%

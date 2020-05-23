@@ -184,7 +184,8 @@ th {
   padding: 0; }
 
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 *,
 *:before,
@@ -202,8 +203,10 @@ body {
 
 .container {
   width: 80%;
-  color: #fff;
   margin: 2rem auto; }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%; } }
 
 .wrapper {
   width: 100%;
@@ -362,10 +365,9 @@ hr {
 
 header {
   width: 80%;
+  position: fixed;
   font-size: 16px;
   top: 0;
-  left: 0;
-  background: #FFDC00;
   z-index: 999; }
   header nav {
     display: flex;
@@ -406,11 +408,50 @@ header {
     header .nav-links .resume {
       background-color: #41308d;
       align-items: center;
-      padding: 10px;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
       color: #fff;
       font-weight: 600;
       height: 2.5rem;
+      position: relative;
+      -webkit-appearance: none;
+      -webkit-box-pack: center;
+      justify-content: center;
+      line-height: 1.2;
       user-select: none;
       vertical-align: middle;
       border-radius: 5px;
-      transistion: all ease 0s; }
+      transistion: all 250ms ease 0s;
+      white-space: nowrap; }
+
+main {
+  margin-top: 15rem; }
+  @media screen and (max-width: 768px) {
+    main {
+      margin-top: 12rem; }
+      main .intro h2,
+      main .intro p {
+        margin: 2.5rem 0; }
+      main .intro h2 {
+        font-size: 6rem;
+        font-weight: 700; } }
+    @media screen and (max-width: 768px) and (max-width: 768px) {
+      main .intro h2 {
+        font-size: 2.5rem; } }
+  @media screen and (max-width: 768px) {
+      main .intro--details {
+        width: 50%;
+        line-height: 2; } }
+    @media screen and (max-width: 768px) and (max-width: 900px) {
+      main .intro--details {
+        width: 80%; } }
+    @media screen and (max-width: 768px) and (max-width: 768px) {
+      main .intro--details {
+        width: 100%; } }
+  @media screen and (max-width: 768px) {
+      main .intro--btn {
+        color: #b2a8e1;
+        text-decoration: none;
+        border: 2px solid; } }

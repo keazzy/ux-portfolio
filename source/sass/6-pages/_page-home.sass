@@ -1,10 +1,9 @@
 header
   width: 80%
-  position:
+  position: fixed
   font-size: 16px
   top: 0
-  left: 0
-  background: $yellow
+  background:
   z-index: 999
 
 
@@ -52,15 +51,60 @@ header
     .resume
       background-color: $primary
       align-items: center
-      padding: 10px
+      padding-top: 1rem
+      padding-bottom: 1rem
+      padding-left: 1.5rem
+      padding-right: 1.5rem
       color: $white
       font-weight: 600
       height: 2.5rem
-      position: 
+      position: relative
+      -webkit-appearance: none
+      -webkit-box-pack: center
+      justify-content: center
+      line-height: 1.2
       user-select: none
       vertical-align: middle
       border-radius: 5px
-      transistion: all ease 0s
+      transistion: all 250ms ease 0s
+      white-space: nowrap
+
+main
+  margin-top: 15rem
+
+  @media screen and ( max-width: 768px  )
+    margin-top: 12rem
+
+    .intro
+        @media screen and ( max-width: 768px )
+          font-size: 2.5rem
+
+      &--details
+        width: 50%
+        line-height: 2
+
+        @media screen and ( max-width: 900px )
+          width: 80%
+        @media screen and ( max-width: 768px )
+          width: 100%
+
+      &--btn
+        color: $primary-40
+        text-decoration: none
+        border: 2px solid $primay-40
+        font-weight: 600
+        height: 3rem
+        line-height: 1.2
+        min-width: 2.5rem
+        padding: 1.5rem
+        vertical-align: middle
+        border-radius: 0.25rem
+        outline: none
+        transition: all 250ms ease 0s
+      
+          
+          
+    
         
       
       
