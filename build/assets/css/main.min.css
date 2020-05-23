@@ -439,10 +439,10 @@ header {
       white-space: nowrap; }
 
 main {
-  margin-top: 15rem; }
+  margin-top: 12em; }
   @media screen and (max-width: 768px) {
     main {
-      margin-top: 12rem; } }
+      margin-top: 9rem; } }
   main .intro h2,
   main .intro p {
     margin: 2rem 0; }
