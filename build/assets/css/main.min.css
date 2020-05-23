@@ -1,5 +1,7 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize * */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,900");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -187,10 +189,10 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit; }
+  box-sizing: border-box; }
 
 body {
-  background: #130F23;
+  background: #fff;
   font-size: 14px;
   line-height: 1.6;
   font-size: 14px;
@@ -198,10 +200,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+.container {
+  width: 80%;
+  color: #fff;
+  margin: 2rem auto; }
+
 .wrapper {
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto; }
+  margin: auto;
+  background: #aaa; }
+
+.spacer {
+  margin: 2rem 0;
+  height: 10px; }
 
 section {
   display: -webkit-box; }
@@ -327,6 +339,10 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
+.text-accent {
+  color: #41308d;
+  font-size: 14px; }
+
 .flex-video {
   height: 0;
   margin-bottom: 0.88889rem;
@@ -343,3 +359,58 @@ hr {
   top: 0;
   width: 100%;
   left: 0; }
+
+header {
+  width: 80%;
+  font-size: 16px;
+  top: 0;
+  left: 0;
+  background: #FFDC00;
+  z-index: 999; }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% auto;
+    width: 80%; }
+    @media screen and (max-width: 768px) {
+      header nav {
+        width: 90%; } }
+    header nav .logo {
+      width: 50px; }
+      header nav .logo img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        border: 1px #41308d; }
+  header .nav-links {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-weight: 400; }
+    @media screen and (max-width: 768px) {
+      header .nav-links {
+        justify-content: flex-end; } }
+    header .nav-links li {
+      display: inline-block; }
+      header .nav-links li a {
+        color: #41308d;
+        text-decoration: none; }
+      header .nav-links li:hover {
+        color: #111; }
+    @media screen and (max-width: 768px) {
+      header .nav-links .hide-mobile {
+        display: none !important; } }
+    header .nav-links .resume {
+      background-color: #41308d;
+      align-items: center;
+      padding: 10px;
+      color: #fff;
+      font-weight: 600;
+      height: 2.5rem;
+      user-select: none;
+      vertical-align: middle;
+      border-radius: 5px;
+      transistion: all ease 0s; }

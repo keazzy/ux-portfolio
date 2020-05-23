@@ -1,0 +1,66 @@
+header
+  width: 80%
+  position:
+  font-size: 16px
+  top: 0
+  left: 0
+  background: $yellow
+  z-index: 999
+
+
+
+  nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 2% auto
+    width: 80%
+
+    @media screen and ( max-width: 768px )
+      width: 90%
+
+    .logo
+      width: 50px
+      img
+        max-width: 100%
+        height: auto
+        border-radius: 50%
+        border: 1px $primary
+  
+  .nav-links
+    width: 60%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    list-style: none
+    font-weight: 400
+    @media screen and ( max-width: 768px  )
+      justify-content: flex-end
+
+    li
+      display: inline-block
+      a
+        color: $primary
+        text-decoration: none
+      &:hover
+        color: $black
+
+    .hide-mobile
+      @media screen and ( max-width: 768px )
+        display: none !important
+
+    .resume
+      background-color: $primary
+      align-items: center
+      padding: 10px
+      color: $white
+      font-weight: 600
+      height: 2.5rem
+      position: 
+      user-select: none
+      vertical-align: middle
+      border-radius: 5px
+      transistion: all ease 0s
+        
+      
+      
