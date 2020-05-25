@@ -499,3 +499,6 @@ main {
             width: 70%; } }
       main .about__content .avatar {
         padding: 0 4rem; }
+        @media screen and (max-width: 768px) {
+          main .about__content .avatar {
+            padding: 0; } }
