@@ -19,7 +19,8 @@ let autoprefixer = require('gulp-autoprefixer');
 let minifycss = require('gulp-clean-css');
 
 // JSS / plugins
-let uglify = require('gulp-uglify');
+//let uglify = require('gulp-uglify');
+let uglify = require("gulp-uglify-es").default;
 
 // Utility plugins
 let concat = require('gulp-concat');
@@ -89,6 +90,7 @@ function js(done) {
         .pipe(dest('build/assets/js'));
     done();
 };
+
 
 //Concat and Compress Vendor .js files
 function vendor(done) {
