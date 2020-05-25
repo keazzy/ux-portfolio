@@ -2,10 +2,8 @@ header
   width: 100%
   position: fixed
   top: 0
-  background:
+  background: $white
   z-index: 99999
-
-
 
   nav
     display: flex
@@ -31,7 +29,7 @@ header
     justify-content: space-between
     align-items: center
     list-style: none
-    font-weight: 400
+    font-weight: 300
     @media screen and ( max-width: 768px  )
       justify-content: flex-end
 
@@ -40,8 +38,8 @@ header
       a
         color: $primary
         text-decoration: none
-      &:hover
-        color: $black
+        &:hover
+          color: $black
 
     .hide-mobile
       @media screen and ( max-width: 768px )
@@ -67,18 +65,19 @@ header
       border-radius: 5px
       transistion: all 250ms ease 0s
       white-space: nowrap
+      min-width: 2.5rem
 
 main
-  margin-top: 12em
+  margin-top: 15rem
   @media screen and ( max-width: 768px )
-    margin-top: 9rem
+    margin-top: 12rem
   .intro
     h2,
     p
-      margin: 2rem 0
+      margin: 2.5rem 0
 
     h2
-      font-size: 5rem
+      font-size: 6rem
       font-size: 700
       @media screen and ( max-width: 768px )
         font-size: 2.5rem
@@ -89,7 +88,48 @@ main
 
       @media screen and ( max-width: 900px )
         width: 80%
+      @media screen and ( max-width: 768px )
+        width: 100%
     
+  .about
+    margin: 20rem 0
+    &__header
+      margin: 4rem 0
+      h2
+        font-size: 3rem
+        span
+          font-family: 'Fira Code', monospace
+          @media screen and ( max-width: 768px )
+            font-size: 2.5rem
+    &__content
+      display: grid
+      grid-template-columns: 50% 50%
+      align-items: center
+
+      @media screen and ( max-width: 900px )
+        grid-template-columns: 100%
+      p
+        margin: 2.5rem 0
+        color: $gray
+        line-height: 2
+      .technologies
+        color: $gray
+        margin-left: 1.5rem
+        display: flex
+        justify-content: space-between
+        width: 60%
+
+        ul
+          li
+            line-height: 2
+        @media screen and ( max-width: 768px )
+          width: 70%
+      .avatar
+        padding: 0 4rem
+            
+          
+              
+           
         
 
     
