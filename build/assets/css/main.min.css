@@ -392,7 +392,10 @@ header {
   z-index: 99999; }
   header .moon-outline {
     font-size: 28px;
-    color: #fbco2d; }
+    color: #fbc02d; }
+  header .hamburger {
+    font-size: 28px;
+    color: #404040; }
   header nav {
     display: flex;
     justify-content: space-between;
