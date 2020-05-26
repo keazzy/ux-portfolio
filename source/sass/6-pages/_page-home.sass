@@ -182,24 +182,26 @@ footer
     margin: auto
     font-weight: 600
     color: lighten($dark, 20%)
-    &:hover
-      color: $dark
+  &:hover
+    color: $dark
 
 ///import css-variables from 
 .dark
   body, html
-    background: #212121
+  background: $background-primary
 
   header
-    background: #212121
+    background: $background-primary
     color: darken($light, 20%)
-
+  h2
+    color: $light
   main
     color: $light
-      background: #212121
+    background: $background-primary
+    
 
   footer
-    background: $muted-dark
+    background: $background-primary
     .social-icon
       color: darken($light, 20%)
     &:hover

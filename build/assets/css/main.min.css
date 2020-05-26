@@ -204,7 +204,7 @@ body {
   -webkit-text-size-adjust: 100%;
   font-family: 'Roboto' , sans-serif; }
   body.dark {
-    background: #212121; }
+    background: #130f23; }
 
 .text-accent {
   color: #41308d; }
@@ -555,23 +555,22 @@ footer {
     margin: auto;
     font-weight: 600;
     color: #737373; }
-    footer .social-icon:hover {
-      color: #404040; }
+  footer:hover {
+    color: #404040; }
 
-.dark body, .dark html {
-  background: #212121; }
-
-.dark header {
-  background: #212121;
-  color: #adadad; }
-
-.dark main {
-  color: #e0e0e0;
-    color-background: #212121; }
-
-.dark footer {
-  background: #2e2d2d; }
-  .dark footer .social-icon {
+.dark {
+  background: #130f23; }
+  .dark header {
+    background: #130f23;
     color: #adadad; }
-  .dark footer:hover {
+  .dark h2 {
     color: #e0e0e0; }
+  .dark main {
+    color: #e0e0e0;
+    background: #130f23; }
+  .dark footer {
+    background: #130f23; }
+    .dark footer .social-icon {
+      color: #adadad; }
+    .dark footer:hover {
+      color: #e0e0e0; }
