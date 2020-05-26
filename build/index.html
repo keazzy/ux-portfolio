@@ -6,6 +6,9 @@
     <meta name="theme-color" content="#130F23" />
     <link rel="shortcut icon" href="asset/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css"
+        integrity="sha256-kx16nUTlNRyEpdk7cvpnqblbDbTe/nADul9o2uYeGSw=" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
@@ -17,7 +20,7 @@
 <body>
 
     <header>
-        <nav>
+        <nav class="menu">
             <div class="logo">
                 <img src="./assets/img/avatar.jpg" alt="">
             </div>
@@ -26,15 +29,16 @@
                 <li class="hide-mobile"><a href="#">About.</a></li>
                 <li class="hide-mobile"><a href="#">Works.</a></li>
                 <li class="hide-mobile"><a href="#">Contact.</a></li>
-                <li class="theme-switch-wrapper">
-                    <lable class="theme-switch">
-                        <input type="checkbox" id="checkbox"/>
-                        <span class="slider round"></span>
-                    </lable>
-                    
-                </li>
                 <li class=""><a href="assets/cv.pdf" class="resume">RESUME.</a></li>
             </ul>
+            <div class="other-controls">
+                <button>
+                    <ion-icon name="moon-outline" class="dark-mode-button moon-outline"></ion-icon>
+                </button>
+                <button class="toggle">
+                    <ion-icon class="hamburger" name="menu"></ion-icon>
+                </button>
+            </div>
 
         </nav>
 
@@ -52,7 +56,7 @@
                     <span>I research, I Desgin, I Bring to life</span><br>Have an intresting project for me to work on?
                 </p>
                 <div class="spacer"></div>
-                <a href="#" class="intro--btn button">Let's Talk</a>
+                <a href="#" class="intro--btn btn">Let's Talk</a>
             </div>
 
             <div class="about" id="about">
@@ -105,17 +109,27 @@
             </div>
 
             <div class="works" id="works">
-                    <div class="works__header">
-                        <h2><span class="text-accent">02.</span>Works.</h2>
-                    </div>
+                <div class="works__header">
+                    <h2><span class="text-accent">02.</span>Works.</h2>
+                </div>
 
-                    <div class="all-works">
-                        
+                <div class="all-works">
 
-                    </div>
+
+                </div>
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="social-links">
+            <ion-icon class="social-icon" name="logo-facebook"><a></a></ion-icon>
+            <ion-icon class="social-icon" name="logo-twitter"><a></a></ion-icon>
+            <ion-icon class="social-icon" name="logo-instagram"><a></a></ion-icon>
+            <ion-icon class="social-icon" name="logo-slack"><a></a></ion-icon>
+        </div>
+
+    </footer>
 
 
 
@@ -196,7 +210,8 @@
                     height: 0,
                     "border-style": "solid",
                     "border-width": "0 40px 69.3px 40px",
-                    "border-color": "transparent transparent " + $this.style.bubbles_xcolor + " transparent",
+                    "border-color": "transparent transparent " + $this.style.bubbles_xcolor +
+                        " transparent",
                     background: "transparent"
                 });
             } else {
@@ -229,7 +244,55 @@
             }
         }
         background.initializr()
+
+        var menuToggleButton = document.querySelector("button.toggle");
+        var menuTarget = document.querySelector(".side-menu");
+        var menuBlock = document.querySelector("menu");
+
+        function toggleMenuVisibility() {
+            menuTarget.classList.toggle("side-menu--active");
+            animateCSS(".menu", "fadeIn");
+        }
+
+        function animateCSS(element, animationName, callback) {
+            var node = document.querySelector(element)
+            node.classList.add('animated', animationName)
+
+            function handleAnimationEnd() {
+                node.classList.remove('animated', animationName)
+                node.removeEventListener('animationend', handleAnimationEnd)
+
+                if (typeof callback === 'function') callback()
+            }
+
+            node.addEventListener('animationend', handleAnimationEnd)
+        }
+
+        menuToggleButton.addEventListener('click', toggleMenuVisibility);
+
+
+
+
+        // Toggle dark/light mode 
+        var wrapper = document.querySelector("body");
+        var darkModeToggle = document.querySelector(".dark-mode-button");
+
+        function toggleSunMoon() {
+            wrapper.classList.toggle("dark");
+            if (darkModeToggle.name == "moon-outline") {
+                darkModeToggle.name = "sunny";
+            } else {
+                darkModeToggle.name = "moon-outline";
+            }
+        }
+
+        function toggleDarkMode() {
+            toggleSunMoon();
+        }
+
+        darkModeToggle.addEventListener("click", toggleDarkMode);
     </script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 

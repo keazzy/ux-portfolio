@@ -5,6 +5,10 @@ header
   background: $white
   z-index: 99999
 
+
+  .moon-outline
+    font-size: 28px
+    color: #fbco2d
   nav
     display: flex
     justify-content: space-between
@@ -147,6 +151,57 @@ main
       width: 100%
       height: auto
       background: #252047
+
+
+
+
+
+//Footer
+footer
+  position: relative
+  bottom: 0
+  padding: 1rem
+  width: 100%
+  background: $muted-light
+  box-sizing: border-box
+
+
+  .social-links
+    margin: auto
+    display: grid
+    justify-items: center
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: 1fr
+    font-size: 22px
+    max-width: 300px
+  .social-icon
+    margin: auto
+    font-weight: 600
+    color: lighten($dark, 20%)
+    &:hover
+      color: $dark
+
+///import css-variables from 
+.dark
+  body, html
+    background: #212121
+
+  header
+    background: #212121
+    color: darken($light, 20%)
+
+  main
+    color: $light
+      background: #212121
+
+  footer
+    background: $muted-dark
+    .social-icon
+      color: darken($light, 20%)
+    &:hover
+      color: $light
+
+
           
           
             
