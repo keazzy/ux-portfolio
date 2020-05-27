@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Adeleke Azeez</title>
 </head>
 
@@ -24,13 +25,6 @@
             <div class="logo">
                 <img src="./assets/img/avatar.jpg" alt="">
             </div>
-            <input id="toggle" type="checkbox">
-
-
-            <label class="toggle-container" for="toggle">
-
-                <span class="button button-toggle"></span>
-            </label>
 
             <ul class="nav-links">
                 <li class="hide-mobile"><a href="#">About.</a></li>
@@ -66,12 +60,12 @@
                 <a href="#" class="intro--btn btn">Let's Talk</a>
             </div>
 
-            <div class="about" id="about">
+            <div class="about slide-up" id="about">
                 <div class="about__header">
                     <h2><span class="text-accent">01.</span>About me.</h2>
                 </div>
 
-                <div class="about__content">
+                <div class="about__content slide-up">
                     <div class="details">
                         <p>
                             I’m a designer who codes. I strive to create simple, original, and impactful user
@@ -139,7 +133,7 @@
     </footer>
 
 
-
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script>
         var text = document.getElementById('intro--about');
         var typewriter = new Typewriter(text, {
@@ -298,9 +292,28 @@
         }
 
         darkModeToggle.addEventListener("click", toggleDarkMode);
+
+
+        //ScrollReveal
+        ScrollReveal({
+            reset: true,
+            mobile: true,
+        });
+        ScrollReveal().reveal('.text-accent')
+        ScrollReveal().reveal('.intro--name', {
+            delay: 500
+        });
+        ScrollReveal().reveal('.intro--details', {
+            delay: 2000
+        });
+        var slideUp = {
+            distance: '150%',
+            origin: 'bottom',
+            opacity: null
+        };
+
+        ScrollReveal().reveal('.slide-up', slideUp);
     </script>
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
