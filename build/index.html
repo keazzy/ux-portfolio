@@ -103,7 +103,7 @@
                             </div>
                         </p>
                     </div>
-                    <div class="avatar">
+                    <div class="avatar slide-up">
                         <img src="./assets/img/avatar.jpg" alt="">
                     </div>
                 </div>
@@ -309,10 +309,29 @@
         var slideUp = {
             distance: '150%',
             origin: 'bottom',
-            opacity: null
+            opacity: null,
+            delay: 500
         };
 
-        ScrollReveal().reveal('.slide-up', slideUp);
+        ScrollReveal().reveal('.slide-up', slideUp,);
+        ScrollReveal().reveal('.slide-up', slideUp,);
+
+
+
+        //Project Card
+        let project = [{
+            name: "Digital Walls",
+            description: "This is a Web app that allow you find and explore different app",
+            technologies: ['Html', 'CSS', 'Figma', 'JS'],
+            github: 'https://github.com/keazzy'
+        }]
+        ,
+    projectContent = document.querySelector(".all-works");
+var fragment = document.createDocumentFragment;
+projects.forEach(e => {
+    let t = document.createElement("div");
+    t.innerHTML = `\n    <div class="works__cards">\n                            <div class="works__card--content">\n                                <div class="projects__card--content--header">\n                                    <h2>${projects.name}</h2>\n                                </div>\n                                <div class="projects__card--content--about">\n                                    <p>${projects.description}</p>\n                                </div>\n                                <div class="project__card--content--tech">\n                                    <span>${e.technologies[0]}</span>\n                                    <span>${e.technologies[1]}</span>\n                                    <span>${e.technologies[2]}</span>\n                                </div>\n                                <div class="projects__card--content--links">\n                                    <a href="${e.github}"><span class="fa fa-github"></span></a>\n                                    <a href="${e.github}"><span class="fa fa-link"></span></a>\n                                </div>\n                                <div class="project__card--image">\n                                    \n                                </div>\n                            </div>\n                            \n                        </div>\n    `, fragment.appendChild(t)
+}), projectContent.appendChild(fragment);
     </script>
 </body>
 
