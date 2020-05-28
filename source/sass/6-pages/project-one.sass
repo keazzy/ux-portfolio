@@ -1,3 +1,4 @@
+//navbar
 header
   width: 100%
   position: fixed
@@ -76,36 +77,18 @@ header
       white-space: nowrap
       min-width: 2.5rem
 
-main
-  margin-top: 15rem
+.main
+  margin-top: 10rem
   @media screen and ( max-width: 768px )
-    margin-top: 12rem
-  .intro
-    h2,
-    p
-      margin: 2.5rem 0
-
-    h2
-      font-size: 6rem
-      font-size: 700
-      @media screen and ( max-width: 768px )
-        font-size: 2.5rem
-    &--details
-      color: $gray
-      width: 50%
-      line-height: 2
-
-      @media screen and ( max-width: 900px )
-        width: 80%
-      @media screen and ( max-width: 768px )
-        width: 100%
-    
-  .about
+    margin-top: 7rem
+  
+  .project
     margin: 20rem 0
     &__header
       margin: 4rem 0
       h2
         font-size: 3rem
+        color: #000
         span
           font-family: 'Fira Code', monospace
           @media screen and ( max-width: 768px )
@@ -121,18 +104,6 @@ main
         margin: 2.5rem 0
         color: $gray
         line-height: 2
-      .technologies
-        color: $gray
-        margin-left: 1.5rem
-        display: flex
-        justify-content: space-between
-        width: 60%
-
-        ul
-          li
-            line-height: 2
-        @media screen and ( max-width: 768px )
-          width: 70%
       .avatar
         padding: 0 4rem
         @media screen and ( max-width: 768px )
@@ -140,60 +111,52 @@ main
         img
           width: 100%
 
-  .works
+  .projects
     margin: 20rem 0
-    &__header
-      margin: 4rem 0
-      h2
-        font-size: 3rem
-        span
-          font-family: 'Fira Code', monospace
+    @media screen and ( max-width: 768px )
+        margin: 1rem 0
+
+    &--details
+        width: 50%
+        p
+            font-size: 18px
         @media screen and ( max-width: 768px )
-          font-size: 2.5rem
-    .all-works > div
-      margin: 2rem 0
-    &__card
-      width: 100%
-      height: auto
-      background: #252047
-      border-radius: 0.4rem
-      cursor: pointer
-      padding: 3.2rem
-      display: grid
-      grid-template-columns: 50% 50%
+            width: 80%
+            p
+                font-size: 1.4rem
+            
+            
+    img
+        margin: 10rem 0
+        width: 100% 
+        height: auto
 
-      @media screen and ( max-width: 768px )
-        grid-template-columns: 100%
-
-      &:hover
-        transition: all 250ms ease 0s
-        transform: scale(1.02)
-      
-      &--content
-        &--header,
-        &--about,
-        &--tech,
-        &--links
-          margin: 1.5rem 0
+    &--next
+        text-align: center
         &--header
-          font-size: 1.8rem
-        &--about
-          color: $gray
-          line-height: 2
-        
-        &--tech
-          font-weight: bold
-          span
-            margin-right: 2rem
+            align-content: center
+            text-align: center   
+        .vertical-line
+            display: inline-block
+            justify-items: center
+            align-content: center
+            justify-content: center
+            text-align: center
+            //border-left: 1px solid #000
+            background: linear-gradient(to right, #ccc 50%, #000 50%)
+            background-size: 200% 100%
+            background-position: left bottom
+            transition: all 1s ease 
+            margin: 0 10px
+            height: 80px
+            width: 2px
 
-        &--links
-          a
-            color: $white
-            font-size: 2.5rem
-            margin-right: 2rem
             &:hover
-              color: $primary-40
-        
+                cursor: pointer
+                background-position: right bottom
+                
+            
+            
 
 
 
@@ -232,10 +195,6 @@ footer
   header
     background: $background-primary
     color: darken($light, 20%)
-    .nav-links
-      li
-        a
-          color: #fff
   h2
     color: $light
   main
@@ -249,25 +208,3 @@ footer
       color: darken($light, 20%)
     &:hover
       color: $light
-
-
-          
-          
-            
-          
-              
-           
-        
-
-    
-
-    
-        
-    
-      
-          
-          
-    
-        
-      
-      

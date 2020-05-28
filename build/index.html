@@ -23,7 +23,7 @@
     <header>
         <nav class="menu">
             <div class="logo">
-                <img src="./assets/img/avatar.jpg" alt="">
+                <a href="./index.html"><img src="./assets/img/avatar.jpg" alt=""></a>
             </div>
 
             <ul class="nav-links">
@@ -60,12 +60,12 @@
                 <a href="#" class="intro--btn btn">Let's Talk</a>
             </div>
 
-            <div class="about slide-up" id="about">
+            <div class="about" id="about">
                 <div class="about__header">
                     <h2><span class="text-accent">01.</span>About me.</h2>
                 </div>
 
-                <div class="about__content slide-up">
+                <div class="about__content">
                     <div class="details">
                         <p>
                             I’m a designer who codes. I strive to create simple, original, and impactful user
@@ -103,18 +103,36 @@
                             </div>
                         </p>
                     </div>
-                    <div class="avatar slide-up">
+                    <div class="avatar">
                         <img src="./assets/img/avatar.jpg" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="works" id="works">
+            <div class="works slide-up" id="works">
                 <div class="works__header">
                     <h2><span class="text-accent">02.</span>Works.</h2>
                 </div>
 
                 <div class="all-works">
+                    <!--<div class="works__cards">
+                        <div class="works__card--content">
+                            <div class="projects__card--content--header">
+                                <h2>${projects.name}</h2>
+                            </div>
+                            <div class="projects__card--content--about">
+                                <p>${projects.description}</p>
+                            </div>
+                            <div class="project__card--content--tech"> <span>${e.technologies[0]}</span>
+                                <span>${e.technologies[1]}</span> <span>${e.technologies[2]}</span> </div>
+                            <div class="projects__card--content--links"> <a href="${e.github}"><span
+                                        class="fa fa-github"></span></a> <a href="${e.github}"><span
+                                        class="fa fa-link"></span></a> </div>
+                            <div class="project__card--image">
+                            </div>
+                        </div>
+                    </div>-->
+                   
 
 
                 </div>
@@ -246,6 +264,7 @@
         }
         background.initializr()
 
+        //Hamburger
         var menuToggleButton = document.querySelector("button.toggle");
         var menuTarget = document.querySelector(".side-menu");
         var menuBlock = document.querySelector("menu");
@@ -313,25 +332,55 @@
             delay: 500
         };
 
-        ScrollReveal().reveal('.slide-up', slideUp,);
-        ScrollReveal().reveal('.slide-up', slideUp,);
+        ScrollReveal().reveal('.slide-up', slideUp, );
 
 
 
         //Project Card
-        let project = [{
-            name: "Digital Walls",
-            description: "This is a Web app that allow you find and explore different app",
-            technologies: ['Html', 'CSS', 'Figma', 'JS'],
-            github: 'https://github.com/keazzy'
-        }]
-        ,
-    projectContent = document.querySelector(".all-works");
-var fragment = document.createDocumentFragment;
-projects.forEach(e => {
-    let t = document.createElement("div");
-    t.innerHTML = `\n    <div class="works__cards">\n                            <div class="works__card--content">\n                                <div class="projects__card--content--header">\n                                    <h2>${projects.name}</h2>\n                                </div>\n                                <div class="projects__card--content--about">\n                                    <p>${projects.description}</p>\n                                </div>\n                                <div class="project__card--content--tech">\n                                    <span>${e.technologies[0]}</span>\n                                    <span>${e.technologies[1]}</span>\n                                    <span>${e.technologies[2]}</span>\n                                </div>\n                                <div class="projects__card--content--links">\n                                    <a href="${e.github}"><span class="fa fa-github"></span></a>\n                                    <a href="${e.github}"><span class="fa fa-link"></span></a>\n                                </div>\n                                <div class="project__card--image">\n                                    \n                                </div>\n                            </div>\n                            \n                        </div>\n    `, fragment.appendChild(t)
-}), projectContent.appendChild(fragment);
+        let projects = [
+            {
+                name: "Digital Walls",
+                description: "This is a Web app that allow you find and explore different app",
+                technologies: ['Html', 'CSS', 'Figma', 'JS'],
+                github: 'https://github.com/keazzy',
+                preview: "https://google.com",
+                image: ''
+            }, 
+        ];
+        let projectContent = document.querySelector(".all-works");
+        var fragment = document.createDocumentFragment();
+
+        projects.forEach((project) => {
+            let div = document.createElement("div");
+            div.innerHTML = `
+            <div class="works__card">
+                        <div class="works__card--content">
+                            <div class="works__card--content--header">
+                                <h2>${project.name}</h2>
+                            </div>
+                            <div class="works__card--content--about">
+                                <p>${project.description}</p>
+                            </div>
+                            <div class="works__card--content--tech"> <span>${project.technologies[0]}</span>
+                                <span>${project.technologies[1]}</span> <span>${project.technologies[2]}</span> </div>
+                            <div class="works__card--content--links"> <a href="${project.github}"><span
+                                        class="fa fa-github"></span></a> <a href="${project.github}"><span
+                                        class="fa fa-link"></span></a> </div>
+                            <p><a href="./indexx.html">View use case</a></p>
+                           
+                        </div>
+                        <div class="works__card--image">
+                            <img src="${project.image}">
+                        </div>
+                    </div>
+
+
+
+
+            `;
+            fragment.appendChild(div)
+        });
+        projectContent.appendChild(fragment);
     </script>
 </body>
 

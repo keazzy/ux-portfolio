@@ -2,144 +2,209 @@
 <html lang="en">
 
 <head>
-    <!-- Theme color change -->
+    <meta charset="UTF-8">
     <meta name="theme-color" content="#130F23" />
-    <!-- Page Title -->
-    <title>Kelvin Ossai Portfolio</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
-    <!-- External Css Link -->
+    <link rel="shortcut icon" href="asset/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/main.min.css">
-    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css"
+        integrity="sha256-kx16nUTlNRyEpdk7cvpnqblbDbTe/nADul9o2uYeGSw=" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Typewritter Js -->
     <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Adeleke Azeez</title>
 </head>
 
 <body>
+
     <header>
-
-        <!-- Navigation Bar -->
-
-        <nav>
+        <nav class="menu">
             <div class="logo">
-                <img src="assets/images/logo_100px.svg" alt="logo">
+                <a href="index.html"><img src="./assets/img/avatar.jpg" alt=""></a>
             </div>
 
             <ul class="nav-links">
-                <li class="hide-mobile"><a href="#about">About</a></li>
-                <li class="hide-mobile"><a href="#projects">Projects</a></li>
-                <li class="hide-mobile"><a href="">Contact</a></li>
-                <li><a href="assets/kelvin_cv.pdf" class="resume" download>Resume</a></li>
+                <li class="hide-mobile"><a href="#">About.</a></li>
+                <li class="hide-mobile"><a href="#">Works.</a></li>
+                <li class="hide-mobile"><a href="#">Contact.</a></li>
+                <li class=""><a href="assets/cv.pdf" class="resume">RESUME.</a></li>
             </ul>
-            <input id="toggle" type="checkbox">
+            <div class="other-controls">
+                <button>
+                    <ion-icon name="moon-outline" class="dark-mode-button moon-outline"></ion-icon>
+                </button>
+                <button class="toggle">
+                    <ion-icon class="hamburger" name="menu"></ion-icon>
+                </button>
+            </div>
 
-
-            <label class="toggle-container" for="toggle">
-
-                <span class="button button-toggle"></span>
-            </label>
         </nav>
+
     </header>
 
-    <main>
-
-        <!-- Main Content -->
+    <main class="main">
         <div class="container">
-            <div class="introduction">
-                <p class="text-accent">Hello, my name is</p>
-                <h2 class="introduction--name">Balogun Abdulazeez.</h2>
-                <h2 id="introduction--about">ICreate • IDesign • ICode</h2>
-                <p class="introduction--details">Making things looks pretty on the web is one of my favourite things to
-                    do. I’m a very meticulous and fun-loving software engineer who has a flair for UI design. I love to
-                    write easy to understand and maintainable code.</p>
-                <div class="spacer"></div>
-                <a href="" class="introduction--button">Get In Touch</a>
-            </div>
-
-            <!-- About Me -->
-            <div class="about" id="about">
-                <div class="about__header">
-                    <h2><span class="text-accent">01. </span> About Me</h2>
-                </div>
-
-                <div class="about__content">
+            <div class="project__header" id="project">
+                <div class="project__content">
                     <div class="details">
-                        <p>Hey there! I'm Kelvin, a self taught software engineer based in Lagos, Nigeria. In my years
-                            of adventures with coding , I’ve been opportuned to create exceptionally good products that
-                            not only look esthetically appealing but also very intuitive to the user.</p>
-                        <p>I'm really passionate about using technology to design softwares that helps promote the
-                            welfare of the society and also empowering the succeeding generations with gained knowledge.
-                        </p>
-                        <p>Whenever i'm not on my laptop coding, I love to play the piano, listen to some cool musics
-                            and watch movies.</p>
+                        <h1>
+                            Elevate Security.
+                            </h2>
 
-                        <p>
-                            Some Technologies i have worked with includes,
-                            <div class="technologies">
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>JQuery</li>
-                                    <li>PHP</li>
-                                    <li>MySQL</li>
-                                </ul>
-                                <ul>
-                                    <li>VueJs</li>
-                                    <li>Figma</li>
-                                    <li>Node.js</li>
-                                    <li>Vuetify</li>
-                                    <li>Chakra UI</li>
-                                    <li>MongoDB & Express</li>
-                                </ul>
-                            </div>
-
-                        </p>
                     </div>
                     <div class="avatar">
-                        <img src="assets/images/kelvin.jpg" alt="Kelvin Ossai">
+                        <p>The old way of doing security awareness isn't cutting it. We helped elevate security move
+                            away from the dark cyber landscape, and crafted a conversational brand that resonated with
+                            the user on a human level.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Projects i have worked on -->
-            <div class="projects" id="projects">
-                <div class="projects__header">
-                    <h2><span class="text-accent">02. </span> Recent Work </h2>
+            <div class="projects slide-up" id="works">
+                <div class="projects--img">
+                    <img src="./assets/img/render.png" alt="" width="100%">
                 </div>
-                <div class="all-projects">
-                    <!-- All Projects will be appended here by Javascript -->
+                <div class="projects--details">
+                    <p>We evolved the original elevate logo icon rather than replacing it. We redrew the icon on a
+                        100x100 grid, creating a more solid and structured mark to anchor the rebrand on. </p>
                 </div>
-            </div>
+                <div class="projects--img">
+                    <img src="./assets/img/pro-image.jpg" alt="">
+                </div>
+                <div class="projects--details">
+                    <p>To build out the visual language, we created a system of coloured shapes that were dissected from
+                        a circle. Gestural marks were then added to the shapes to soften the harsh edges, and make them
+                        more friendly.</p>
+                </div>
 
-            <!-- Contact Me -->
-            <div class="contact">
-                <div class="contact__header">
-                    <h2><span class="text-accent">03. </span> Get In Touch </h2>
+                <div class="projects--img">
+                    <img src="./assets/img/pro.jpg" alt="">
                 </div>
+                <div class="projects--details">
+                    <p>The Elevate Brand is strategically positioned itself as genuine, optimistic and refreshing — 3
+                        traits that are rare in the cybersecurity world.</p>
+                    <p>We used a bold 2-tone colour palette, choppy line-work and fresh typography to create a look that
+                        would stand out against its competitors.</p>
+                </div>
+                <div class="projects--img">
+                    <img src="./assets/img/Branding Guide.jpg" alt="">
+                </div>
+                <div class="projects--details">
+                    <p>Then, we combined all the brand elements into a familiar and functional marketing site.</p>
+                </div>
+                <div class="projects--img">
+                    <img src="./assets/img/website.jpg" alt="">
+                </div>
+                <div class="projects--details">
+                    <p>Illustrated characters were then introduced to assist in the educational component of elevate.
+                        The dragosaurus 'Ellie' changes colour, texture and mood based on the security level of the
+                        user. </p>
+                </div>
+                <div class="projects--img">
+                    <img src="./assets/img/dinos.jpg" alt="">
+                </div>
+                <a href="#"><div class="projects--next">
+                    <p>Continue to next project </p>
+                    <span class="vertical-line"></span>
+                </div>
+                
+                <div class="projects--next--header">
+                    <h2>Timechain</h2>
+                </div></a>
             </div>
         </div>
     </main>
 
+    <footer>
+        <div class="social-links">
+            <ion-icon class="social-icon" name="logo-facebook"><a></a></ion-icon>
+            <ion-icon class="social-icon" name="logo-twitter"><a></a></ion-icon>
+            <ion-icon class="social-icon" name="logo-instagram"><a></a></ion-icon>
+            <ion-icon class="social-icon" name="logo-slack"><a></a></ion-icon>
+        </div>
 
+    </footer>
+
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script>
-        var text = document.getElementById('introduction--about');
-        var typewriter = new Typewriter(text, {
-            loop: true
+        //Hamburger
+        var menuToggleButton = document.querySelector("button.toggle");
+        var menuTarget = document.querySelector(".side-menu");
+        var menuBlock = document.querySelector("menu");
+
+        function toggleMenuVisibility() {
+            menuTarget.classList.toggle("side-menu--active");
+            animateCSS(".menu", "fadeIn");
+        }
+
+        function animateCSS(element, animationName, callback) {
+            var node = document.querySelector(element)
+            node.classList.add('animated', animationName)
+
+            function handleAnimationEnd() {
+                node.classList.remove('animated', animationName)
+                node.removeEventListener('animationend', handleAnimationEnd)
+
+                if (typeof callback === 'function') callback()
+            }
+
+            node.addEventListener('animationend', handleAnimationEnd)
+        }
+
+        menuToggleButton.addEventListener('click', toggleMenuVisibility);
+
+
+
+
+        // Toggle dark/light mode 
+        var wrapper = document.querySelector("body");
+        var darkModeToggle = document.querySelector(".dark-mode-button");
+
+        function toggleSunMoon() {
+            wrapper.classList.toggle("dark");
+            if (darkModeToggle.name == "moon-outline") {
+                darkModeToggle.name = "sunny";
+            } else {
+                darkModeToggle.name = "moon-outline";
+            }
+        }
+
+        function toggleDarkMode() {
+            toggleSunMoon();
+        }
+
+        darkModeToggle.addEventListener("click", toggleDarkMode);
+
+
+        //ScrollReveal
+        ScrollReveal({
+            reset: true,
+            mobile: true,
         });
+        ScrollReveal().reveal('.text-accent')
+        ScrollReveal().reveal('.intro--name', {
+            delay: 500
+        });
+        ScrollReveal().reveal('.intro--details', {
+            delay: 2000
+        });
+        var slideUp = {
+            distance: '150%',
+            origin: 'bottom',
+            opacity: null,
+            delay: 500
+        };
 
-        typewriter.typeString('ICreate • IDesign • ICode')
-            .pauseFor(1500)
-            .deleteAll()
-            .typeString('I love to build web apps')
-            .pauseFor(1500)
-            .deleteAll()
-            .typeString('<strong>I am a developer!</strong>')
-            .start();
+        ScrollReveal().reveal('.slide-up', slideUp, );
+
+
+
+        //Project Card
     </script>
-
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

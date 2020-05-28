@@ -87,10 +87,10 @@ projects.forEach((project) => {
     <div class="works__cards">
                             <div class="works__card--content">
                                 <div class="projects__card--content--header">
-                                    <h2>${projects.name}</h2>
+                                    <h2>${project.name}</h2>
                                 </div>
                                 <div class="projects__card--content--about">
-                                    <p>${projects.description}</p>
+                                    <p>${project.description}</p>
                                 </div>
                                 <div class="project__card--content--tech">
                                     <span>${project.technologies[0]}</span>
