@@ -551,6 +551,12 @@ main {
           color: #b2a8e1; }
       main .works__card--content p a {
         color: #e0e0e0; }
+      main .works__card--image {
+        width: 100%;
+        height: auto; }
+        @media screen and (max-width: 768px) {
+          main .works__card--image {
+            display: none; } }
 
 footer {
   position: relative;
@@ -597,7 +603,6 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  background: #fff;
   z-index: 99999; }
   header .moon-outline {
     font-size: 28px;
