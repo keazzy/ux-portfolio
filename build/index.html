@@ -80,13 +80,11 @@
                             multiple products.
                         </p>
                         <p>
-                            I enjoy creating user-centric, delightful, and human experiences as well as using technology
-                            to design softwares that helps the
-                            welfare of the society and also empowering the succeeding generations with gained knowledge.
+                            I enjoy creating user-centric, delightful, and human experiences With your vision, my design savvy, and a hefty amount of coffee, we can create a digital
+                            experience that is creative, beautiful, and memorable.
                         </p>
                         <p>
-                            With your vision, my design savvy, and a hefty amount of coffee, we can create a digital
-                            experience that is creative, beautiful, and memorable.
+                            
                         </p>
                         <p> Below are my current Toolset
                             <div class="technologies">
@@ -319,7 +317,15 @@
                 technologies: ['Html', 'CSS', 'Figma', 'JS'],
                 github: 'https://github.com/keazzy',
                 preview: "https://google.com",
-                image: ''
+                image: './assets/img/card-img.jpeg'
+            }, 
+            {
+                name: "Digital Walls",
+                description: "This is a Web app that allow you find and explore different places in the world on the Go",
+                technologies: ['Html', 'CSS', 'Figma', 'JS'],
+                github: 'https://github.com/keazzy',
+                preview: "https://google.com",
+                image: './assets/img/Macbook Prorendered.png'
             }, 
         ];
         let projectContent = document.querySelector(".all-works");
@@ -331,7 +337,7 @@
             <div class="works__card">
                         <div class="works__card--content">
                             <div class="works__card--content--header">
-                                <h2>${project.name}</h2>
+                                <h2 style="color: #fff ">${project.name}</h2>
                             </div>
                             <div class="works__card--content--about">
                                 <p>${project.description}</p>
@@ -341,11 +347,11 @@
                             <div class="works__card--content--links"> <a href="${project.github}"><span
                                         class="fa fa-github"></span></a> <a href="${project.github}"><span
                                         class="fa fa-link"></span></a> </div>
-                            <p><a href="./indexx.html">View use case</a></p>
+                            <p><a href="./indexx.html" style="text-decoration: underline">View use case</a></p>
                            
                         </div>
                         <div class="works__card--image">
-                            <img src="${project.image}">
+                            <img src="${project.image}" width="100%" height="auto">
                         </div>
                     </div>
 

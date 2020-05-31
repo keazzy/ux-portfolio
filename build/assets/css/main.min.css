@@ -539,15 +539,18 @@ main {
         color: #aaa;
         line-height: 2; }
       main .works__card--content--tech {
-        font-weight: bold; }
+        font-weight: bold;
+        color: #e0e0e0; }
         main .works__card--content--tech span {
           margin-right: 2rem; }
       main .works__card--content--links a {
-        color: #fff;
+        color: #e0e0e0;
         font-size: 2.5rem;
         margin-right: 2rem; }
         main .works__card--content--links a:hover {
           color: #b2a8e1; }
+      main .works__card--content p a {
+        color: #e0e0e0; }
 
 footer {
   position: relative;
